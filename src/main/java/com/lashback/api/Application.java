@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Main Spring Boot Application class for Lashback API
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.lashback")
 public class Application {
 
     public static void main(String[] args) {
