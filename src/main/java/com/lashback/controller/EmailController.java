@@ -1,6 +1,8 @@
 package com.lashback.controller;
 
 import com.lashback.dto.BookingRequest;
+import com.lashback.model.Booking;
+import com.lashback.repository.BookingRepository;
 import com.lashback.services.EmailService;
 
 import java.util.Map;
@@ -12,9 +14,11 @@ import org.springframework.web.bind.annotation.*;
 public class EmailController {
 
     private final EmailService emailService;
+    private final  BookingRepository bookingRepository;
 
-    public EmailController(EmailService emailService) {
+    public EmailController(EmailService emailService, BookingRepository bookingRepository) {
         this.emailService = emailService;
+        this.bookingRepository = bookingRepository;
     }
 
     @PostMapping("/email")
@@ -29,6 +33,20 @@ public class EmailController {
         }
         """.formatted(req.firstName, req.lastName);
 
+
+
+    Booking booking = new Booking();
+    booking.setFirstName(req.getFirstName());
+    booking.setLastName(req.getLastName());
+    booking.setEmail(req.getEmail());
+    booking.setPhone(req.getPhone());
+    booking.setService(req.getService());
+    booking.setTime(req.getTime());
+    booking.setNotes(req.getNotes());
+
+    bookingRepository.save(booking
+
+    );
         return emailService.sendBookingEmail(json);
     }
 }
