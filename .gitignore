@@ -1,0 +1,34 @@
+# Maven
+target/
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.class
+*.classpath
+.project
+.settings/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+.gradle/
+build/
+
+# Spring Boot
+application-*.properties
+.env
+
+# Database
+*.db
+*.sqlite
