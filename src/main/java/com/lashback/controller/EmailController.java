@@ -24,7 +24,7 @@ public class EmailController {
         String json = """
         {
           "from": "Lash Studio <onboarding@resend.dev>",
-          "to": "your@email.com",
+          "to": "daaanai@gmail.com",
           "subject": "New Booking",
           "html": "<h1>New booking from %s %s</h1>"
         }
