@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "https://your-vercel-app.vercel.app")
 @RestController
 @RequestMapping("/api")
 public class EmailController {
