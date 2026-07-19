@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-@Data
+
 @Entity
+@Data
 public class Booking {
 
     @Id
@@ -13,15 +14,19 @@ public class Booking {
     private Long id;
 
     private String firstName;
+
     private String lastName;
+
     private String email;
+
     private String phone;
 
     private String service;
+
     private String time;
+
     private LocalDate date;
 
     @Column(length = 1000)
     private String notes;
-
 }
