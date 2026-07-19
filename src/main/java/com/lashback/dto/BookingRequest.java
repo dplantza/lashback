@@ -2,14 +2,24 @@ package com.lashback.dto;
 
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
 public class BookingRequest {
-    public String firstName;
-    public String lastName;
-    public String email;
-    public String phone;
-    public String service;
-    public String date;
-    public String time;
-    public String notes;
+
+    private String firstName;
+
+    private String lastName;
+
+    private String email;
+
+    private String phone;
+
+    private String service;
+
+    private String time;
+
+    private LocalDate date;
+
+    private String notes;
 }

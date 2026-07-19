@@ -31,7 +31,7 @@ public class EmailController {
           "subject": "New Booking",
           "html": "<h1>New booking from %s %s</h1>"
         }
-        """.formatted(req.firstName, req.lastName);
+        """.formatted(req.getFirstName(), req.getLastName());
 
 
 
@@ -43,6 +43,7 @@ public class EmailController {
     booking.setService(req.getService());
     booking.setTime(req.getTime());
     booking.setNotes(req.getNotes());
+    booking.setDate(req.getDate());
 
     bookingRepository.save(booking
 
